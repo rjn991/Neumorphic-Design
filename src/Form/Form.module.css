@@ -1,0 +1,53 @@
+.formWrapper {
+  box-sizing: border-box;
+  min-height: calc(100vh - 71.6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  min-width: 400px;
+  padding: 30px;
+  border-radius: 25px;
+  background: #e0e0e0;
+  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #c3bfbf32;
+}
+.form p {
+  padding-bottom: 5px;
+}
+.inputBox {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border: 0px;
+  color: #757575;
+  outline: none;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: inset 4px 4px 7px #d3d3d3, inset -4px -4px 7px #ededed;
+}
+
+.inputBox:nth-last-child(3) {
+  width: auto;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+.inputBox::file-selector-button {
+  padding: 10px 10px;
+  margin-bottom: 0px;
+  border: 0px;
+
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #cecece, -5px -5px 10px #f2f2f2;
+}
+.inputBox:last-child {
+  width: auto;
+  padding: 10px 30px;
+  margin-bottom: 0px;
+  background: #7295fd;
+  box-shadow: 6px 6px 11px #bebebe, -6px -6px 11px #ffffff;
+  color: white;
+}
