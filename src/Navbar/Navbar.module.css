@@ -22,5 +22,9 @@
   background: #7295fd;
   /* box-shadow: inset 4px 4px 8px #617fd7, inset -4px -4px 8px #83abff; */
   box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
-
+}
+@media only screen and (max-width: 768px) {
+  .wrapper p {
+    padding: 8px 15px;
+  }
 }

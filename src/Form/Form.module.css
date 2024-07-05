@@ -51,3 +51,13 @@
   box-shadow: 6px 6px 11px #bebebe, -6px -6px 11px #ffffff;
   color: white;
 }
+@media only screen and (max-width: 768px) {
+  .formWrapper {
+    min-height: 0px;
+    margin-top: 30px;
+  }
+  .form {
+    min-width: 80vw;
+  }
+
+}
