@@ -1,6 +1,6 @@
 import classes from "./Form.module.css";
 import { useState, useEffect } from "react";
-const Form = () => {
+const Form = (props) => {
   const [name, setName] = useState("");
   const [dob, setDOb] = useState("");
   const [city, setCity] = useState("");
@@ -12,7 +12,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4000/insert", {
+      const response = await fetch("http://192.168.29.215:4000/insert", {
         method: "POST",
         body: JSON.stringify({
           name: name,
@@ -32,6 +32,7 @@ const Form = () => {
       // console.log(response.json())
       const result = await response.json();
       console.log(result);
+      props.updateModal(true)
     } catch (error) {
       console.log(error);
     }
@@ -138,6 +139,7 @@ const Form = () => {
             className={classes.inputBox}
             type="submit"
             name="Submit"
+            value="Submit"
             placeholder="PIN Code"
           ></input>
         </form>
