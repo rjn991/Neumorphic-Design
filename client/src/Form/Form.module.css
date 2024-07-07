@@ -51,6 +51,13 @@
   box-shadow: 6px 6px 11px #bebebe, -6px -6px 11px #ffffff;
   color: white;
 }
+.inputBox[type=number]::-webkit-inner-spin-button, 
+.inputBox[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 @media only screen and (max-width: 768px) {
   .formWrapper {
     min-height: 0px;

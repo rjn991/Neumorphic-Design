@@ -118,7 +118,7 @@ const Form = (props) => {
           ></input>
           <br></br>
           <input
-            className={classes.inputBox}
+            className={[classes.inputBox,classes.inputNumber].join(" ")}
             type="number"
             placeholder="PIN Code"
             value={pincode}

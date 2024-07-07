@@ -8,14 +8,16 @@
   background: #e0e0e0;
   box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff;
 }
-.wrapper p {
+.wrapper a {
+  text-decoration: none;
   padding: 5px 10px;
   margin: 0px 10px;
   border-radius: 10px;
   background: #e0e0e0;
+  color: black;
   box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
 }
-.wrapper p:nth-child(1) {
+.wrapper a.active {
   border-radius: 10px;
   color: white;
   border-radius: 10px;
@@ -24,7 +26,7 @@
   box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper p {
+  .wrapper a {
     padding: 8px 15px;
   }
 }
