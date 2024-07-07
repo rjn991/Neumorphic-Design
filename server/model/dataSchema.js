@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   city: String,
   state: String,
   pincode: String,
+  image: String
 });
 
 const Users = mongoose.model("users", userSchema);

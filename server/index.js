@@ -4,8 +4,11 @@ const cors = require("cors");
 const app = express();
 const User = require("./model/dataSchema.js");
 
-app.use(express.json());
+// app.use(express.json());
 app.use(cors());
+// Increase the payload size limit
+app.use(express.json({ limit: '50mb' }));
+// app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // DB config
 const db = "mongodb+srv://rjn991:sapnupuas@data.8hhte1d.mongodb.net/data";

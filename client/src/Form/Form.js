@@ -8,23 +8,25 @@ const Form = () => {
   const [add1, setAdd1] = useState("");
   const [add2, setAdd2] = useState("");
   const [pincode, setPincode] = useState("");
-
+  const [image,setImage] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:4000/insert", {
         method: "POST",
         body: JSON.stringify({
-          name:name,
+          name: name,
           dob,
           address1: add1,
           address2: add2,
           city,
           state,
           pincode,
+          image
         }),
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin":"*"
         },
       });
       // console.log(response.json())
@@ -38,6 +40,17 @@ const Form = () => {
   // useEffect(() => {
   //   console.log(name,dob); // This will log the updated state whenever 'name' changes
   // }, [name,dob]);
+  const handleImage = (e) => {
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0])
+    reader.onload = () => {
+      console.log(reader.result);
+      setImage(reader.result)
+    }
+    reader.onerror = (error) => {
+      console.log("error", error)
+    }
+  };
 
   return (
     <div className={classes.formWrapper}>
@@ -115,7 +128,11 @@ const Form = () => {
           <br></br>
           <label for="dd">Upload Profile Picture</label>
           <br></br>
-          <input className={classes.inputBox} type="file"></input>
+          <input
+            className={classes.inputBox}
+            onChange={handleImage}
+            type="file"
+          ></input>
           <br></br>
           <input
             className={classes.inputBox}
@@ -125,6 +142,7 @@ const Form = () => {
           ></input>
         </form>
       </div>
+      <img src={image}></img>
     </div>
   );
 };
