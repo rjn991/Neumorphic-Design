@@ -1,7 +1,7 @@
 import Navbar from './Navbar/Navbar';
 import Form from './Form/Form'
 import Modal from './Modal/Modal';
-import { useState,Component } from 'react';
+import { Component } from 'react';
 import classes from './App.module.css'
 class App extends Component  {
   state = {

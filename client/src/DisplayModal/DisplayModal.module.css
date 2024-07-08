@@ -1,0 +1,32 @@
+.modalWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.181);
+  backdrop-filter: blur(3px);
+}
+.modal {
+  height: fit-content;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: #ffffff;
+  /* box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff; */
+}
+.modal p {
+  font-size: 20px;
+}
+.modal input {
+  border: 0px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  background: #7295fd;
+  /* box-shadow: inset 4px 4px 8px #617fd7, inset -4px -4px 8px #83abff; */
+  box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
+}

@@ -1,5 +1,5 @@
 import classes from "./Form.module.css";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 const Form = (props) => {
   const [name, setName] = useState("");
   const [dob, setDOb] = useState("");
@@ -127,7 +127,7 @@ const Form = (props) => {
             }}
           ></input>
           <br></br>
-          <label for="dd">Upload Profile Picture</label>
+          <label>Upload Profile Picture</label>
           <br></br>
           <input
             className={classes.inputBox}
@@ -144,7 +144,7 @@ const Form = (props) => {
           ></input>
         </form>
       </div>
-      <img src={image}></img>
+      {/* <img src={image}></img> */}
     </div>
   );
 };

@@ -1,0 +1,32 @@
+.orderList {
+    list-style: decimal;
+    list-style-position: inside;  
+}
+.list, .list span {
+    font-size: 20px;
+    font-weight: 400;
+} 
+.list p {
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    font-weight:400;
+    color: #7295fd;;
+}
+
+.wrapper {
+    margin: 0px 10px 0px 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 40px;
+    border-radius: 25px;
+    height: calc(100vh - 80.6px);
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #e0e0e0;
+    box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff;
+}
+.inner {
+    height: 100%;
+    overflow-y: auto;
+}
