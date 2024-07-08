@@ -12,12 +12,12 @@
 }
 .modal {
   height: fit-content;
-  padding: 30px;
+  padding: 30px 70px;
   border-radius: 20px;
-
   background: #ffffff;
   /* box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff; */
 }
+
 .modal p {
   font-size: 20px;
 }
@@ -29,4 +29,46 @@
   background: #7295fd;
   /* box-shadow: inset 4px 4px 8px #617fd7, inset -4px -4px 8px #83abff; */
   box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
+}
+.modal p.title {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #7295fd;
+}
+.imagePlaceholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+.wrapper {
+  display: flex;
+}
+.right {
+  margin: 10px 40px 10px 0px;
+}
+.left {
+  margin: 10px 10px 10px 40px;
+  
+}
+.title {
+  font-size: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal {
+    padding: 20px 20px;
+  }
+  .modal p {
+    font-size: 18px;
+  }
+  .right {
+    margin: 10px 10px 10px 0px;
+  }
+  .left {
+    margin: 10px 10px 10px 10px;
+    
+  }
 }

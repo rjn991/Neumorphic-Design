@@ -16,8 +16,12 @@ const DisplayUsers = (props) => {
   const userData = users.map((user, pos) => {
     return (
       <li className={classes.list} key={user._id}>
-        <span>{user.name}</span>
-        <p onClick={() => props.updateDisplayModal(true)}>View Details</p>
+        <span>
+          {user.name}
+        </span>
+        <p onClick={() => props.updateDisplayModal(true, user._id)}>
+          View Details
+        </p>
         <br></br>
       </li>
     );

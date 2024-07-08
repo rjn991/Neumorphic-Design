@@ -5,11 +5,13 @@ import DisplayUsers from "./DisplayUsers/DisplayUsers";
 import DisplayModal from "./DisplayModal/DisplayModal";
 class Display extends Component {
   state = {
-    showDisplayModal:false
+    showDisplayModal:false,
+    currentUserId:""
   }
-  updateDisplayModal = (modalState) => {
+  updateDisplayModal = (modalState,userid) => {
     this.setState({
-    showDisplayModal:modalState
+    showDisplayModal:modalState,
+    currentUserId:userid
     })
   }
   render() {
@@ -17,7 +19,7 @@ class Display extends Component {
       <div className={classes.Display}>
         <Navbar></Navbar>
         <DisplayUsers updateDisplayModal={this.updateDisplayModal}></DisplayUsers>
-        {this.state.showDisplayModal && <DisplayModal updateDisplayModal={this.updateDisplayModal}></DisplayModal>}
+        {this.state.showDisplayModal && <DisplayModal updateDisplayModal={this.updateDisplayModal} currentUserId={this.state.currentUserId}></DisplayModal>}
       </div>
     );
   }

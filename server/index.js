@@ -38,6 +38,13 @@ app.get("/getUsers", (req, res) => {
   .catch((err) => {res.json(err)})
 });
 
+app.get("/getUser/:currentId", (req,res) => {
+  console.log(req.params.currentId)
+  User.find({"_id":req.params.currentId})
+  .then((users)=>{res.json(users)})
+  .catch((err) => {res.json(err)})
+})
+
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
