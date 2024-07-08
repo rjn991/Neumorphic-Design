@@ -39,7 +39,7 @@ app.get("/getUsers", (req, res) => {
 });
 
 app.get("/getUser/:currentId", (req,res) => {
-  console.log(req.params.currentId)
+  // console.log(req.params.currentId)
   User.find({"_id":req.params.currentId})
   .then((users)=>{res.json(users)})
   .catch((err) => {res.json(err)})

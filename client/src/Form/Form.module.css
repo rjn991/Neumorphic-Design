@@ -58,6 +58,9 @@
     appearance: none;
     margin: 0; 
 }
+.valid {
+  color: red;
+}
 @media only screen and (max-width: 768px) {
   .formWrapper {
     min-height: 0px;
