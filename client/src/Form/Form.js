@@ -14,7 +14,7 @@ const Form = (props) => {
     e.preventDefault();
     if (valid) {
       try {
-        const response = await fetch("https://neumorphic-design.onrender.com/insert", {
+        const response = await fetch("https://api.ranjan.tech/insert", {
           method: "POST",
           body: JSON.stringify({
             name: name,

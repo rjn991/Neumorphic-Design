@@ -7,7 +7,7 @@ const DisplayModal = (props) => {
   const [age, setAge] = useState("");
   useEffect(() => {
     axios
-      .get(`https://neumorphic-design.onrender.com/getUser/${props.currentUserId}`)
+      .get(`https://api.ranjan.tech/getUser/${props.currentUserId}`)
       .then((user) => {
         setUser(user.data);
         getDOB(user.data[0].dob);

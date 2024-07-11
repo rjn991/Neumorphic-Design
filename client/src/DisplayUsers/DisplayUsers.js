@@ -6,7 +6,7 @@ const DisplayUsers = (props) => {
 
   useEffect(() => {
     axios
-      .get("https://neumorphic-design.onrender.com/getUsers")
+      .get("https://api.ranjan.tech/getUsers")
       .then((users) => setUsers(users.data))
       .catch((err) => {
         console.log(err);
